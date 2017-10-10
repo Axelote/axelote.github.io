@@ -1819,27 +1819,36 @@ var App = function (_Component) {
 					'div',
 					{ className: 'cv-colorpicker-item', key: color.toString() },
 					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-						'label',
-						{ className: 'cv-colorpicker-label', htmlFor: 'color-' + color },
-						color
-					),
-					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
 						'div',
 						{ className: 'cv-colorpicker-checkbox-wrap' },
 						__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement('input', { className: 'cv-colorpicker-checkbox', type: 'radio', name: 'color', value: color, id: 'color-' + color, onChange: _this2.changeSchemeClick.bind(_this2) })
+					),
+					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+						'label',
+						{ className: 'cv-colorpicker-label', htmlFor: 'color-' + color },
+						color
 					)
 				);
 			});
 			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
 				'div',
-				{ className: 'colorScheme-' + this.state.colorScheme },
+				{ className: 'cv-app colorScheme-' + this.state.colorScheme },
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__components_LeftSide__["a" /* default */], null),
-				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__components_Content__["a" /* default */], null),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
 					'div',
 					{ className: 'cv-colorpicker' },
-					listColors
-				)
+					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+						'h3',
+						null,
+						'\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0446\u0432\u0435\u0442\u043E\u0432\u0443\u044E \u0441\u0445\u0435\u043C\u0443'
+					),
+					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+						'div',
+						{ className: 'cv-colorpicker-list' },
+						listColors
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__components_Content__["a" /* default */], null)
 			);
 		}
 	}]);
@@ -23071,7 +23080,15 @@ var Content = function (_React$Component) {
 			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
 				"div",
 				{ className: "cv-col-r" },
-				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement("div", { className: "container" })
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+					"div",
+					{ className: "container" },
+					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+						"h1",
+						null,
+						"Under development"
+					)
+				)
 			);
 		}
 	}]);

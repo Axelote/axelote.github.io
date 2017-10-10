@@ -48,11 +48,33 @@ table {
 
 /*GENERAL STYLES*/
 
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
 label {
 	cursor: pointer;
 }
+h1 {
+	font-size: 36px;
+}
+h2 {
+	font-size: 28px;
+}
+h3 {
+	font-size: 20px;
+	margin-bottom: 16px;
+}
 
 /*GENERAL STYLES*/
+
+.cv-app {
+	font-family: 'Open Sans', sans-serif;
+}
 
 /*LEFT-SIDE*/
 
@@ -99,9 +121,6 @@ label {
 	color: #333;
 	font-size: 36px;
 }
-.cv-colorpicker {
-	margin-left: 500px;
-}
 
 /*LEFT-SIDE*/
 
@@ -111,14 +130,24 @@ label {
 	margin-left: 350px;
 }
 
-/*RIGHT-SIDE*/
+/*RIGHT-SIDE -> COLOR-PICKER*/
+
+.cv-colorpicker {
+	margin-left: 400px;
+}
+.cv-colorpicker-list {
+	
+}
+.cv-colorpicker-item {
+	margin-right: 16px;
+	display: flex;
+}
+
+/*RIGHT-SIDE -> COLOR-PICKER*/
 
 .container {
 	max-width: 420px;
 	margin: 0 auto;
-}
-h1 {
-	font-size: 52px;
 }
 
 /*RIGHT-SIDE*/
