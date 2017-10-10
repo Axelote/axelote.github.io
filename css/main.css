@@ -1,4 +1,4 @@
-/* RESET CSS */
+/*RESET CSS*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -19,7 +19,6 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    line-height: normal;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -45,17 +44,81 @@ table {
 	border-spacing: 0;
 }
 
-/* RESET CSS */
+/*RESET CSS*/
 
+/*GENERAL STYLES*/
 
-header {
-    background: #333;
-    padding: 16px 0;
+label {
+	cursor: pointer;
 }
+
+/*GENERAL STYLES*/
+
+/*LEFT-SIDE*/
+
+/*LEFT-SIDE -> COLOR SCHEME*/
+
+.colorScheme-blue .cv-col-l {
+	background: #6a1b9a;
+}
+.colorScheme-blue .cv-author  {
+	background: #4a148c;
+}
+.colorScheme-blue .cv-author-name {
+	color: #fff;
+}
+
+.colorScheme-red .cv-col-l {
+	background: #fb3f4c;
+}
+.colorScheme-red .cv-author  {
+	background: #db3a4a;
+}
+.colorScheme-red .cv-author-name {
+	color: #fff;
+}
+
+/*LEFT-SIDE -> COLOR SCHEME*/
+
+.cv-col-l {
+	width: 350px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #12bd0d;
+	-webkit-box-shadow: 3px 0 10px 0 rgba(0,0,0,0.5);
+	box-shadow: 3px 0 10px 0 rgba(0,0,0,0.5);
+	box-sizing: border-box;
+}
+.cv-author {
+	background: #05a300;
+	padding: 44px;
+}
+.cv-author-name {
+	color: #333;
+	font-size: 36px;
+}
+.cv-colorpicker {
+	margin-left: 500px;
+}
+
+/*LEFT-SIDE*/
+
+/*RIGHT-SIDE*/
+
+.cv-col-r {
+	margin-left: 350px;
+}
+
+/*RIGHT-SIDE*/
+
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
+	max-width: 420px;
+	margin: 0 auto;
 }
 h1 {
-    font-size: 52px;
+	font-size: 52px;
 }
+
+/*RIGHT-SIDE*/
