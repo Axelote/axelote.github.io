@@ -122,6 +122,10 @@ h3 {
 	font-size: 36px;
 }
 
+.cv-contacts {
+	padding: 44px;
+}
+
 /*LEFT-SIDE*/
 
 /*RIGHT-SIDE*/
@@ -140,6 +144,7 @@ h3 {
 }
 .cv-colorpicker-item {
 	margin-right: 16px;
+	margin-bottom: 8px;
 	display: flex;
 }
 
