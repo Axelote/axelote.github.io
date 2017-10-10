@@ -113,6 +113,11 @@ h3 {
 	box-shadow: 3px 0 10px 0 rgba(0,0,0,0.5);
 	box-sizing: border-box;
 }
+.cv-construction {
+	font-style: italic;
+	position: absolute;
+	top: 16px;
+}
 .cv-author {
 	background: #05a300;
 	padding: 44px;
@@ -151,8 +156,8 @@ h3 {
 /*RIGHT-SIDE -> COLOR-PICKER*/
 
 .container {
-	max-width: 420px;
-	margin: 0 auto;
+	max-width: 460px;
+	margin: 0 auto 0 90px;
 }
 
 /*RIGHT-SIDE*/
