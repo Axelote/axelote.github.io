@@ -165,6 +165,7 @@ h3 {
 
 .cv-tools {
 	display: flex;
+	flex-direction: row;
 	justify-content: flex-end;
 	align-items: center;
 	margin-right: 50px;
@@ -185,6 +186,7 @@ h3 {
 }
 .cv-skills-list-i-heading {
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 8px;
@@ -200,6 +202,33 @@ h3 {
 	background: #999;
 	height: 100%;
 	border-radius: 3px;
+}
+.cv-skills-tools {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+.cv-skills-tools-i {
+	margin: 10px 0 10px 10px;
+	cursor: pointer;
+}
+.cv-skills-tools-i.active {
+	color: #666;
+}
+.cv-skills-tools-i:hover {
+	color: #666;
+}
+.cv-skills-grid-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+.cv-skills-grid-tile {
+	width: 33.3%;
+	text-align: center;
 }
 
 /*RIGHT-SIDE*/

@@ -22973,10 +22973,10 @@ var Aside = function (_React$Component) {
 
 
 var author = {
-	/* name: 'Иван',
- surname: 'Чепига',
- born: '22 августа 1991',
- position: 'Front-end, HTML coder' */
+	name: 'Иван',
+	surname: 'Чепига',
+	born: '22 августа 1991',
+	position: 'Front-end, HTML coder'
 };
 
 var Author = function (_React$Component) {
@@ -22989,31 +22989,31 @@ var Author = function (_React$Component) {
 	}
 
 	__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(Author, [{
-		key: "render",
+		key: 'render',
 		value: function render() {
 			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-				"div",
-				{ className: "cv-author" },
+				'div',
+				{ className: 'cv-author' },
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					"div",
-					{ className: "cv-construction" },
-					"\u041D\u0430 \u0441\u0442\u0430\u0434\u0438\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438"
+					'div',
+					{ className: 'cv-construction' },
+					'\u041D\u0430 \u0441\u0442\u0430\u0434\u0438\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438'
 				),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					"h1",
-					{ className: "cv-author-name" },
+					'h1',
+					{ className: 'cv-author-name' },
 					author.name,
-					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement("br", null),
+					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement('br', null),
 					author.surname
 				),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					"div",
-					{ className: "cv-author-birth" },
+					'div',
+					{ className: 'cv-author-birth' },
 					author.born
 				),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					"div",
-					{ className: "cv-author-position" },
+					'div',
+					{ className: 'cv-author-position' },
 					author.position
 				)
 			);
@@ -23303,6 +23303,8 @@ var Tools = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__SkillsList__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__SkillsGrid__ = __webpack_require__(127);
+
 
 
 
@@ -23320,20 +23322,57 @@ var skills = [{
 }, {
 	title: 'CSS',
 	icon: '',
-	percent: 80,
+	percent: 90,
 	level: 'Эксперт'
+}, {
+	title: 'JS',
+	icon: '',
+	percent: 50,
+	level: 'Средний'
 }];
 
 var Skills = function (_React$Component) {
 	__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(Skills, _React$Component);
 
-	function Skills() {
+	function Skills(props) {
 		__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, Skills);
 
-		return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (Skills.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(Skills)).apply(this, arguments));
+		var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (Skills.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(Skills)).call(this, props));
+
+		_this.state = {
+			showList: true,
+			showGrid: false,
+			activeList: 'active',
+			activeGrid: ''
+		};
+		_this.showListClick = _this.showListClick.bind(_this);
+		_this.showGridClick = _this.showGridClick.bind(_this);
+		return _this;
 	}
 
 	__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(Skills, [{
+		key: 'showListClick',
+		value: function showListClick() {
+			var currentState = this.state.active;
+			this.setState({
+				showList: true,
+				showGrid: false,
+				activeList: 'active',
+				activeGrid: ''
+			});
+		}
+	}, {
+		key: 'showGridClick',
+		value: function showGridClick() {
+			var currentState = this.state.active;
+			this.setState({
+				showList: false,
+				showGrid: true,
+				activeList: '',
+				activeGrid: 'active'
+			});
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
@@ -23343,11 +23382,26 @@ var Skills = function (_React$Component) {
 					'div',
 					{ className: 'container' },
 					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+						'div',
+						{ className: 'cv-skills-tools' },
+						__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+							'div',
+							{ className: 'cv-skills-tools-i ' + this.state.activeList, onClick: this.showListClick },
+							'\u0421\u043F\u0438\u0441\u043A\u043E\u043C'
+						),
+						__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+							'div',
+							{ className: 'cv-skills-tools-i ' + this.state.activeGrid, onClick: this.showGridClick },
+							'\u041F\u043B\u0438\u0442\u043A\u043E\u0439'
+						)
+					),
+					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
 						'h2',
 						{ className: 'cv-block-title' },
 						'\u0423\u043C\u0435\u043D\u0438\u044F'
 					),
-					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__SkillsList__["a" /* default */], { skills: skills })
+					this.state.showList ? __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__SkillsList__["a" /* default */], { skills: skills }) : null,
+					this.state.showGrid ? __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__SkillsGrid__["a" /* default */], { skills: skills }) : null
 				)
 			);
 		}
@@ -23375,7 +23429,7 @@ var Skills = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__skillRow__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__SkillItem__ = __webpack_require__(126);
 
 
 
@@ -23401,7 +23455,7 @@ var SkillsList = function (_React$Component) {
 				'div',
 				{ className: 'cv-skills-list' },
 				this.props.skills.map(function (skill, index) {
-					return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__skillRow__["a" /* default */], { title: skill.title, percent: skill.percent, key: index });
+					return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__SkillItem__["a" /* default */], { title: skill.title, percent: skill.percent, key: index });
 				})
 			);
 		}
@@ -23436,19 +23490,19 @@ var SkillsList = function (_React$Component) {
 
 
 
-var SkillRow = function (_React$Component) {
-	__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(SkillRow, _React$Component);
+var SkillItem = function (_React$Component) {
+	__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(SkillItem, _React$Component);
 
-	function SkillRow(props) {
-		__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, SkillRow);
+	function SkillItem(props) {
+		__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, SkillItem);
 
-		var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (SkillRow.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(SkillRow)).call(this, props));
+		var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (SkillItem.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(SkillItem)).call(this, props));
 
-		_this.state = { currentCount: 0 };
+		_this.state = { currentPercent: 0 };
 		return _this;
 	}
 
-	__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(SkillRow, [{
+	__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(SkillItem, [{
 		key: "componentDidMount",
 		value: function componentDidMount() {
 			setInterval(this.timer.bind(this), 7);
@@ -23456,9 +23510,9 @@ var SkillRow = function (_React$Component) {
 	}, {
 		key: "timer",
 		value: function timer() {
-			var maxValue = this.state.currentCount + 1;
-			if (maxValue <= this.props.percent) {
-				this.setState({ currentCount: maxValue });
+			var percentValue = this.state.currentPercent + 1;
+			if (percentValue <= this.props.percent) {
+				this.setState({ currentPercent: percentValue });
 			} else {
 				clearInterval(this.timer);
 			}
@@ -23486,16 +23540,128 @@ var SkillRow = function (_React$Component) {
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
 					"div",
 					{ className: "cv-skills-list-i-progressbar-wrap" },
-					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement("div", { className: "cv-skills-list-i-progressbar", style: { width: this.state.currentCount + '%' } })
+					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement("div", { className: "cv-skills-list-i-progressbar", style: { width: this.state.currentPercent + '%' } })
 				)
 			);
 		}
 	}]);
 
-	return SkillRow;
+	return SkillItem;
 }(__WEBPACK_IMPORTED_MODULE_5_react___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["a"] = (SkillRow);
+/* harmony default export */ __webpack_exports__["a"] = (SkillItem);
+
+/***/ }),
+/* 127 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__SkillTile__ = __webpack_require__(128);
+
+
+
+
+
+
+
+
+
+var SkillsGrid = function (_React$Component) {
+	__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(SkillsGrid, _React$Component);
+
+	function SkillsGrid(props) {
+		__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, SkillsGrid);
+
+		return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (SkillsGrid.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(SkillsGrid)).call(this, props));
+	}
+
+	__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(SkillsGrid, [{
+		key: 'render',
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+				'div',
+				{ className: 'cv-skills-grid-list' },
+				this.props.skills.map(function (skill, index) {
+					return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__SkillTile__["a" /* default */], { title: skill.title, level: skill.level, key: index });
+				})
+			);
+		}
+	}]);
+
+	return SkillsGrid;
+}(__WEBPACK_IMPORTED_MODULE_5_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (SkillsGrid);
+
+/***/ }),
+/* 128 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
+
+
+
+
+
+
+
+var SkillTile = function (_React$Component) {
+	__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(SkillTile, _React$Component);
+
+	function SkillTile(props) {
+		__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, SkillTile);
+
+		return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (SkillTile.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(SkillTile)).call(this, props));
+	}
+
+	__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(SkillTile, [{
+		key: "render",
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+				"div",
+				{ className: "cv-skills-grid-tile" },
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+					"div",
+					{ className: "cv-skills-grid-tile-title" },
+					this.props.title
+				),
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+					"div",
+					{ className: "cv-skills-grid-tile-level" },
+					this.props.level
+				)
+			);
+		}
+	}]);
+
+	return SkillTile;
+}(__WEBPACK_IMPORTED_MODULE_5_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (SkillTile);
 
 /***/ })
 /******/ ]);
