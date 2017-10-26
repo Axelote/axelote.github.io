@@ -23296,11 +23296,6 @@ var Tools = function (_React$Component) {
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
 					'div',
 					{ className: 'cv-tools-i disabled' },
-					this.state.colorValue
-				),
-				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					'div',
-					{ className: 'cv-tools-i disabled' },
 					'\u041F\u0435\u0447\u0430\u0442\u044C'
 				),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
