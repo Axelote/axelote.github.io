@@ -22965,10 +22965,10 @@ var Aside = function (_React$Component) {
 
 
 var author = {
-	/* name: 'Иван',
- surname: 'Чепига',
- born: '22 августа 1991',
- position: 'Front-end, HTML coder' */
+	name: 'Иван',
+	surname: 'Чепига',
+	born: '22 августа 1991',
+	position: 'Front-end, HTML coder'
 };
 
 var Author = function (_React$Component) {
@@ -22981,31 +22981,31 @@ var Author = function (_React$Component) {
 	}
 
 	__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(Author, [{
-		key: "render",
+		key: 'render',
 		value: function render() {
 			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-				"div",
-				{ className: "cv-author" },
+				'div',
+				{ className: 'cv-author' },
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					"div",
-					{ className: "cv-construction" },
-					"\u041D\u0430 \u0441\u0442\u0430\u0434\u0438\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438"
+					'div',
+					{ className: 'cv-construction' },
+					'\u041D\u0430 \u0441\u0442\u0430\u0434\u0438\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438'
 				),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					"h1",
-					{ className: "cv-author-name" },
+					'h1',
+					{ className: 'cv-author-name' },
 					author.name,
-					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement("br", null),
+					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement('br', null),
 					author.surname
 				),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					"div",
-					{ className: "cv-author-birth" },
+					'div',
+					{ className: 'cv-author-birth' },
 					author.born
 				),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					"div",
-					{ className: "cv-author-position" },
+					'div',
+					{ className: 'cv-author-position' },
 					author.position
 				)
 			);
