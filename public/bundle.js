@@ -1788,7 +1788,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-/* const colors = ['default', 'blue', 'red'] */
+var colors = ['default', 'blue', 'red'];
 
 var App = function (_Component) {
 	__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(App, _Component);
@@ -1812,19 +1812,11 @@ var App = function (_Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-			{/*const listColors = colors.map((color) =>
-    <div className="cv-colorpicker-item" key={color.toString()}>
-    	<div className="cv-colorpicker-checkbox-wrap">
-    		<input type="radio" name="color" value={color} id={'color-' + color} className={'cv-colorpicker-checkbox'}  onChange={this.changeSchemeClick.bind(this)}/>
-    	</div>
-    	<label className="cv-colorpicker-label" htmlFor={'color-' + color}>{color}</label>
-    </div>
-    ) */}
 			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
 				'main',
 				{ className: 'cv-app colorScheme-' + this.state.colorScheme },
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__components_Aside__["a" /* default */], null),
-				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__components_Content__["a" /* default */], null)
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__components_Content__["a" /* default */], { colors: colors, changeSchemeClick: this.changeSchemeClick.bind(this) })
 			);
 		}
 	}]);
@@ -22973,10 +22965,10 @@ var Aside = function (_React$Component) {
 
 
 var author = {
-	name: 'Иван',
-	surname: 'Чепига',
-	born: '22 августа 1991',
-	position: 'Front-end, HTML coder'
+	/* name: 'Иван',
+ surname: 'Чепига',
+ born: '22 августа 1991',
+ position: 'Front-end, HTML coder' */
 };
 
 var Author = function (_React$Component) {
@@ -22989,31 +22981,31 @@ var Author = function (_React$Component) {
 	}
 
 	__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(Author, [{
-		key: 'render',
+		key: "render",
 		value: function render() {
 			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-				'div',
-				{ className: 'cv-author' },
+				"div",
+				{ className: "cv-author" },
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					'div',
-					{ className: 'cv-construction' },
-					'\u041D\u0430 \u0441\u0442\u0430\u0434\u0438\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438'
+					"div",
+					{ className: "cv-construction" },
+					"\u041D\u0430 \u0441\u0442\u0430\u0434\u0438\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438"
 				),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					'h1',
-					{ className: 'cv-author-name' },
+					"h1",
+					{ className: "cv-author-name" },
 					author.name,
-					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement('br', null),
+					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement("br", null),
 					author.surname
 				),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					'div',
-					{ className: 'cv-author-birth' },
+					"div",
+					{ className: "cv-author-birth" },
 					author.born
 				),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					'div',
-					{ className: 'cv-author-position' },
+					"div",
+					{ className: "cv-author-position" },
 					author.position
 				)
 			);
@@ -23122,6 +23114,8 @@ var Contacts = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__About__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Tools__ = __webpack_require__(123);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Skills__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Exp__ = __webpack_require__(129);
+
 
 
 
@@ -23136,11 +23130,20 @@ var Contacts = function (_React$Component) {
 var Content = function (_React$Component) {
 	__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(Content, _React$Component);
 
-	function Content() {
+	function Content(props) {
 		__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, Content);
 
-		return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (Content.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(Content)).apply(this, arguments));
+		var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (Content.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(Content)).call(this, props));
+
+		_this.state = { colorScheme: 'default' };
+		return _this;
 	}
+
+	/* changeSchemeClick(e) {
+ 	this.setState({
+ 		colorScheme: e.currentTarget.value
+ 	})
+ } */
 
 	__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(Content, [{
 		key: 'render',
@@ -23148,9 +23151,10 @@ var Content = function (_React$Component) {
 			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
 				'section',
 				{ className: 'cv-col-r' },
-				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Tools__["a" /* default */], null),
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Tools__["a" /* default */], { colors: this.props.colors, changeSchemeClick: this.props.changeSchemeClick.bind(this) }),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__About__["a" /* default */], null),
-				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Skills__["a" /* default */], null)
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Skills__["a" /* default */], null),
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__Exp__["a" /* default */], null)
 			);
 		}
 	}]);
@@ -23249,32 +23253,85 @@ var About = function (_React$Component) {
 var Tools = function (_React$Component) {
 	__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(Tools, _React$Component);
 
-	function Tools() {
+	function Tools(props) {
 		__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, Tools);
 
-		return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (Tools.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(Tools)).apply(this, arguments));
+		var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (Tools.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(Tools)).call(this, props));
+
+		_this.state = {
+			visibility: 'hidden'
+			/* colorScheme: 'default' */
+		};
+		return _this;
 	}
 
 	__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(Tools, [{
-		key: "render",
+		key: 'showPicker',
+		value: function showPicker() {
+			var visible = this.state.visibility;
+			this.setState({
+				visibility: !visible
+			});
+		}
+
+		/* changeSchemeClick(e) {
+  	this.setState({
+  		colorScheme: e.currentTarget.value
+  	})
+  } */
+
+	}, {
+		key: 'render',
 		value: function render() {
+			var _this2 = this;
+
 			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-				"div",
-				{ className: "cv-tools" },
+				'div',
+				{ className: 'cv-tools' },
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					"div",
-					{ className: "cv-tools-i disabled" },
-					"\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C"
+					'div',
+					{ className: 'cv-tools-i disabled' },
+					'\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C'
 				),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					"div",
-					{ className: "cv-tools-i disabled" },
-					"\u041F\u0435\u0447\u0430\u0442\u044C"
+					'div',
+					{ className: 'cv-tools-i disabled' },
+					this.state.colorValue
 				),
 				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
-					"div",
-					{ className: "cv-tools-i disabled" },
-					"\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+					'div',
+					{ className: 'cv-tools-i disabled' },
+					'\u041F\u0435\u0447\u0430\u0442\u044C'
+				),
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+					'div',
+					{ className: 'cv-tools-i', onClick: this.showPicker.bind(this) },
+					'\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438'
+				),
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+					'div',
+					{ className: this.state.visibility ? 'cv-tools-dropdown hidden' : 'cv-tools-dropdown' },
+					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+						'p',
+						{ className: 'cv-tools-dropdown-heading' },
+						'\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0446\u0432\u0435\u0442\u043E\u0432\u0443\u044E \u0441\u0445\u0435\u043C\u0443'
+					),
+					this.props.colors.map(function (color, index) {
+						return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+							'div',
+							{ className: 'cv-colorpicker-i', key: index },
+							__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+								'div',
+								{ className: 'cv-colorpicker-checkbox-wrap' },
+								__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement('input', { type: 'radio', name: 'color', value: color, id: 'color-' + color, className: 'cv-colorpicker-checkbox', onChange: _this2.props.changeSchemeClick.bind(_this2) })
+							),
+							__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+								'label',
+								{ className: 'cv-colorpicker-label', htmlFor: 'color-' + color },
+								color
+							)
+						);
+					})
 				)
 			);
 		}
@@ -23662,6 +23719,145 @@ var SkillTile = function (_React$Component) {
 }(__WEBPACK_IMPORTED_MODULE_5_react___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["a"] = (SkillTile);
+
+/***/ }),
+/* 129 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ExpItem__ = __webpack_require__(130);
+
+
+
+
+
+
+
+
+
+var workExps = [{
+	company: "Rozetka.ua",
+	period: 'Май 2015 – текущий момент',
+	duties: 'Что-то делал, полезное'
+}, {
+	company: "CSS Masters",
+	period: 'Февраль 2015 – Май 2015',
+	duties: 'Компания распалась'
+}];
+
+var Exp = function (_React$Component) {
+	__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(Exp, _React$Component);
+
+	function Exp(props) {
+		__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, Exp);
+
+		var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (Exp.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(Exp)).call(this, props));
+
+		_this.state = {};
+		return _this;
+	}
+
+	__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(Exp, [{
+		key: 'render',
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+				'div',
+				{ className: 'cv-exp cv-block' },
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+					'div',
+					{ className: 'container' },
+					__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+						'h2',
+						{ className: 'cv-block-title' },
+						'\u041E\u043F\u044B\u0442 \u0440\u0430\u0431\u043E\u0442\u044B'
+					),
+					workExps.map(function (workExp, index) {
+						return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__ExpItem__["a" /* default */], { company: workExp.company, period: workExp.period, duties: workExp.duties, key: index });
+					})
+				)
+			);
+		}
+	}]);
+
+	return Exp;
+}(__WEBPACK_IMPORTED_MODULE_5_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (Exp);
+
+/***/ }),
+/* 130 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
+
+
+
+
+
+
+
+var ExpItem = function (_React$Component) {
+	__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(ExpItem, _React$Component);
+
+	function ExpItem(props) {
+		__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, ExpItem);
+
+		return __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (ExpItem.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(ExpItem)).call(this, props));
+	}
+
+	__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(ExpItem, [{
+		key: "render",
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+				"div",
+				{ className: "cv-exp-i" },
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+					"div",
+					{ className: "cv-exp-i-company" },
+					this.props.company
+				),
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+					"div",
+					{ className: "cv-exp-i-period" },
+					this.props.period
+				),
+				__WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+					"div",
+					{ className: "cv-exp-i-duties" },
+					this.props.duties
+				)
+			);
+		}
+	}]);
+
+	return ExpItem;
+}(__WEBPACK_IMPORTED_MODULE_5_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (ExpItem);
 
 /***/ })
 /******/ ]);

@@ -69,6 +69,9 @@ h3 {
 	font-size: 20px;
 	margin-bottom: 16px;
 }
+.hidden {
+	display: none;
+}
 
 /*GENERAL STYLES*/
 
@@ -145,30 +148,13 @@ h3 {
 .cv-col-r {
 	margin-left: 350px;
 }
-
-/*RIGHT-SIDE -> COLOR-PICKER*/
-
-.cv-colorpicker {
-	margin-left: 400px;
-}
-.cv-colorpicker-list {
-	
-}
-.cv-colorpicker-item {
-	margin-right: 16px;
-	margin-bottom: 8px;
-	display: flex;
-	align-items: center;
-}
-
-/*RIGHT-SIDE -> COLOR-PICKER*/
-
 .cv-tools {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: center;
 	margin-right: 50px;
+	position: relative;
 }
 .cv-tools-i {
 	padding: 15px;
@@ -180,6 +166,25 @@ h3 {
 .cv-tools-i.disabled {
 	color: #999;
 	cursor: no-drop;
+}
+.cv-tools-dropdown {
+	position: absolute;
+	right: 0;
+	top: 40px;
+	background: #fff;
+	width: 150px;
+	box-sizing: border-box;
+	padding: 8px;
+	-webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 3px 5px 0 rgba(0,0,0,0.3);
+}
+.cv-tools-dropdown-heading {
+	margin-bottom: 12px;
+}
+.cv-colorpicker-i {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 .cv-skills-list-i {
 	margin-bottom: 16px;
