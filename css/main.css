@@ -77,6 +77,7 @@ h3 {
 
 .cv-app {
 	font-family: 'Open Sans', sans-serif;
+	min-width: 940px;
 }
 .container {
 	max-width: 460px;
