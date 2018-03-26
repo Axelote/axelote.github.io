@@ -696,6 +696,12 @@ a {
 .block_context .promotion__text-title, .block_context .promotion__text-descr {
 		margin-bottom: 16px;
 }
+.context_page .btn_orange {
+		padding: 17px 22px 20px 7px;
+}
+.context_page .btn_red {
+		padding: 14px 50px 21px 24px;
+}
 .block_features {
 		background: #fff url(../img/features.png) no-repeat center top;
 }
@@ -835,4 +841,26 @@ a {
 		background: url(../img/articles-item-opened.png) no-repeat center;
 		top: 5px;
 		left: -10px;
+}
+.articles-block-steps-list {
+		margin-left: 90px;
+		margin-top: 24px;
+}
+.articles-block-steps-item {
+		margin-bottom: 16px;
+}
+.articles-block-steps-item .articles-block-steps-item__heading {
+	text-decoration: underline;
+	color: #cf1800;
+}
+.articles-block-steps-item p {
+		font-size: 22px;
+		color: #343538;
+		margin-bottom: 8px;
+}
+.articles-block-bottom {
+		height: 40px;
+		width: 100%;
+		background: url(../img/articles-block-bottom.png) no-repeat left top/cover;
+		margin-bottom: -32px;
 }
