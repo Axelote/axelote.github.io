@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
+		<div class="overlay hidden"></div>
 		<header class="header">
 			<div class="layout layout_wide">
 				<div class="header__row">
@@ -89,4 +90,15 @@
 		</main>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.button-popup').click(function(event) {
+				event.preventDefault();
+				$('.overlay').removeClass('hidden');
+			});
+			$('.overlay').click(function() {
+				$(this).addClass('hidden');
+			});
+		});
+	</script>
 </html>
