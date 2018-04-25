@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
+		<div class="overlay hidden"></div>
 		<header class="header">
 			<div class="layout layout_wide">
 				<div class="header__row">
@@ -44,7 +45,7 @@
 							<div class="contacts-item">
 								<p><strong>Контактный телефон:</strong><br>(044) 221-45-65</p>
 								<p><strong>Почта:</strong><br><a href="mailto:bns@web-analiz.com.ua">bns@web-analiz.com.ua</a></p>
-								<p><strong>Адрес:</strong><br>Киев, Саперное поле 28, офис 7, (м. Лыбедская)</p>
+								<p><strong>Адрес:</strong><br>Киев, Саперное поле 28, офис 7,<br>(м. Лыбедская)</p>
 								<p><strong>Режим работы:</strong><br>ПН-ПТ с 9:00 до 18:00</p>
 							</div>
 							<div class="contacts-item">
@@ -87,4 +88,15 @@
 		</main>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.button-popup').click(function(event) {
+				event.preventDefault();
+				$('.overlay').removeClass('hidden');
+			});
+			$('.overlay').click(function() {
+				$(this).addClass('hidden');
+			});
+		});
+	</script>
 </html>
