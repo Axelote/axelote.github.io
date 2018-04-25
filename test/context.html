@@ -8,10 +8,11 @@
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
+		<div class="overlay hidden"></div>
 		<header class="header">
 			<div class="layout layout_wide">
 				<div class="header__row">
-					<div class="logo"><img src="img/logo.png" alt="" width="80" height="79"></div>
+					<div class="logo"><img src="img/logo.png" alt="" width="100" height="99"></div>
 					<div class="header__titles">
 						<h2 class="header__title">WebAnalyze</h2>
 						<h3 class="header__subtitle">Раскрутка сайтов</h3>
@@ -198,7 +199,7 @@
 					</section>
 					<section class="section-block callback-block">
 						<div class="callback-block_inner">
-							<div class="callback-block-button"><a href="#">Перезвоните мне</a></div>
+							<div class="callback-block-button"><a href="#" class="button-popup">Перезвоните мне</a></div>
 						</div>
 					</section>
 				</div>
@@ -206,4 +207,15 @@
 		</main>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.button-popup').click(function(event) {
+				event.preventDefault();
+				$('.overlay').removeClass('hidden');
+			});
+			$('.overlay').click(function() {
+				$(this).addClass('hidden');
+			});
+		});
+	</script>
 </html>
