@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
+		<div class="overlay hidden"></div>
 		<header class="header">
 			<div class="layout layout_wide">
 				<div class="header__row">
@@ -89,11 +90,27 @@
 									<p class="article__text">анкоры со ссылок с других страниц, которые ведут на эту страницу.</p>
 								</li>
 							</ul>
+							<div class="article__totals"><img src="img/totals.jpg" alt=""></div>
 						</div>
 						<footer class="article__footer">
 							<time class="article__time">20 июня 2012 г.</time>
 							<div class="article-author"><strong>Автор:</strong> Елена Шульгина</div>
 						</footer>
+						<ul class="article__list list_more">
+								<li class="article-list__item">
+									<p class="article__text">Читайте также:</p>
+								</li>
+								<li class="article-list__item">
+									<a href="#" target="_blank" class="articles-block__link">Подробнее ></a>
+								</li>
+								<li class="article-list__item">
+									<a href="#" target="_blank" class="articles-block__link">Подробнее ></a>
+								</li>
+								<li class="article-list__item">
+									<a href="#" target="_blank" class="articles-block__link">Подробнее ></a>
+								</li>
+								<li class="article-list__item articles_last_item"><a href="#" class="articles-block__link">Вернуться к списку статей ></a></li>
+							</ul>
 					</article>
 					<div class="articles-block-bottom">&nbsp;</div>
 				</div>
@@ -101,4 +118,15 @@
 		</main>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.button-popup').click(function(event) {
+				event.preventDefault();
+				$('.overlay').removeClass('hidden');
+			});
+			$('.overlay').click(function() {
+				$(this).addClass('hidden');
+			});
+		});
+	</script>
 </html>
