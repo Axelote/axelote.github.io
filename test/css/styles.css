@@ -64,6 +64,27 @@ a {
 	transition: all 0.2s linear;
 	visibility: visible;
 }
+.popup {
+    width: 1000px;
+    height: 600px;
+    background: #eaeaea;
+    position: fixed;
+    z-index: 20;
+    left: 50%;
+    top: 50%;
+    margin-left: -500px;
+    margin-top: -300px;
+}
+.popup .section__title {
+    background-position: 0px 0px;
+    padding-left: 64px;
+}
+.popup-layout {
+    padding: 0 50px 0 95px;
+}
+.popup h3 {
+    font-size: 40px;
+}
 .hidden {
 	opacity: 0;
 	visibility: hidden;
