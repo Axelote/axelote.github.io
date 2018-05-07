@@ -84,6 +84,34 @@ a {
 }
 .popup h3 {
     font-size: 40px;
+    margin-bottom: 32px;
+}
+.popup-form-row {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+.popup-form-row:last-child {
+    display: block;
+}
+.popup-form-item {
+    width: 50%;
+    padding-right: 100px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+}
+.popup label {
+    display: block;
+    cursor: pointer;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+.popup input, .popup textarea {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 4px 8px;
+    background: #f9f9f9;
 }
 .hidden {
 	opacity: 0;
