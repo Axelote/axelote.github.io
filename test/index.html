@@ -35,9 +35,15 @@
 								<input id="popup-email" type="text" class="">
 							</div>
 						</div>
-						<div class="popup-form-row">
+						<div class="popup-form-row popup-form_textarea">
 							<label for="popup-msg">Сообщение</label>
 							<textarea id="popup-msg" rows="7"></textarea>
+						</div>
+						<div class="popup-form-row popup-footer">
+							<div class="popup-note">* - поля обязательные для заполнения</div>
+							<div class="button">
+								<button class="button-popup btn_red" type="submit">Получить!</button>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -247,9 +253,11 @@
 			$('.button-popup').click(function(event) {
 				event.preventDefault();
 				$('.overlay').removeClass('hidden');
+				$('.popup').removeClass('hidden');
 			});
 			$('.overlay').click(function() {
 				$(this).addClass('hidden');
+				$('.popup').addClass('hidden');
 			});
 		});
 	</script>
