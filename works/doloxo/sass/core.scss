@@ -1,6 +1,175 @@
-@import 'colors.scss';
+@import "reset.scss";
+@import "grid.scss";
+@import "colors.scss";
+@import "typography.scss";
 
 body {
-    background-color: $color;
-    margin: 0;
+    background-color: #fff;
+    color: $color-black;
+    font-family: 'Montserrat', sans-serif;
+}
+.header {
+    margin: 40px 0;
+}
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__item:first-of-type {
+        .lang-switcher__link {
+            border-left: 2px solid $color-black-5;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+    }
+    &__item:last-of-type {
+        .lang-switcher__link {
+            border-right: 2px solid $color-black-5;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 17px 24px;
+        border-top: 2px solid $color-black-5;
+        border-bottom: 2px solid $color-black-5;
+        box-sizing: border-box;
+        font-size: 18px;
+        font-weight: 700;
+        color: $color-pink-secondary;
+        text-transform: uppercase;
+        
+
+        &.lang_active {
+            background-color: $color-black-5;
+            color: $color-black-40;
+        }
+        &:not(.lang_active):hover {
+            color: $color-pink;
+            transition: color 0.2s linear;
+        }
+    }
+}
+.top-banner {
+    padding: 115px 0;
+    background: url('../img/top-banner-bg.png') no-repeat center;
+}
+button.btn {
+    padding: 18px 48px;
+    color: $color-white;
+    font-size: 18px;
+    font-weight: 700;
+    background: $color-pink-secondary;
+    box-shadow: 0px 8px 20px rgba(83, 2, 38, 0.4);
+    border-radius: 12px;
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), $color-pink-secondary;
+        box-shadow: 0px 2px 10px rgba(83, 2, 38, 0.4);
+        transition: all 0.2s linear;
+    }
+    &:active {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), $color-pink-secondary;
+        box-shadow: none;
+        transition: all 0.2s linear;
+    }
+}
+.features {
+    &-list {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    &-item {
+        width: 33.3%;
+        width: calc(33.3% - 32px);
+        padding: 24px 24px 24px 0;
+        margin-bottom: 24px;
+        box-sizing: border-box;
+    }
+    &-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 144px;
+        height: 144px;
+        margin-bottom: 24px;
+        background: url('../img/icon-poligon.png') no-repeat center;
+
+        svg {
+            fill: $color-pink-secondary;
+        }
+    }
+}
+.form {
+
+    &-item {
+        position: relative;
+        margin-bottom: 24px;
+    }
+    &-bottom-line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .input {
+        position: relative;
+        width: 100%;
+        padding: 18px 24px;
+        border: 2px solid $color-black-20;
+        box-sizing: border-box;
+        border-radius: 12px;
+        background: transparent;
+        font-family: 'Montserrat', sans-serif;
+        z-index: 2;
+
+        &:focus {
+            outline: none;
+            border-color: $color-black-60;
+            transition: all 0.2s linear;
+        }
+        &:invalid {
+            border-color: $color-pink-secondary;
+            transition: all 0.2s linear;
+        }
+        &-textarea {
+            resize: none;
+        }
+    }
+    .placeholder {
+        position: absolute;
+        top: 20px;
+        left: 22px;
+        padding: 0 2px;
+        font-size: 16px;
+        color: $color-black-60;
+        transition: all 0.2s linear;
+        z-index: 1;
+    }
+    .input:focus+.placeholder,
+    .input.filled+.placeholder {
+        top: -6px;
+        background: $color-white;
+        font-size: 14px;
+        z-index: 2;
+    }
+    .input:invalid+.placeholder {
+        color: $color-pink-secondary;
+    }
+}
+.list__item {
+    margin-bottom: 16px;
+}
+.footer {
+    .list {
+        width: calc( 25% - 32px );
+    }
+    .link {
+        font-size: 24px;
+        font-weight: bold;
+    }
 }

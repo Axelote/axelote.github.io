@@ -1,0 +1,72 @@
+.title-h1 {
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: bold;
+}
+.title-h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: bold;
+
+    &.title_underlined {
+        margin-bottom: 64px;
+    }
+}
+.title-h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.title_underlined {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 100px;
+        height: 8px;
+        border-radius: 8px;
+        background-color: $color-black-5;
+    }
+}
+.subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: $color-black-20;
+}
+.text {
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: normal;
+}
+.text-center {
+    text-align: center;
+}
+a {
+    color: $color-pink-secondary;
+
+    &:hover {
+        color: $color-pink;
+        transition: all 0.2s linear;
+    }
+}
+.link_with_arrow {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        right: -34px;
+        width: 18px;
+        height: 16px;
+        background: url('../img/arrow.svg') no-repeat center;
+        transition: all 0.2s linear;
+    }
+    &:hover:after {
+        right: -42px;
+        
+    }
+}
