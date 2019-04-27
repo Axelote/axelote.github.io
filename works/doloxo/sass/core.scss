@@ -54,30 +54,15 @@ body {
     }
 }
 .top-banner {
-    padding: 115px 0;
-    background: url('../img/top-banner-bg.png') no-repeat center;
+    height: calc(100vh - 114px);
+    background: url('../img/top-banner-bg.png') no-repeat right 120px;
 }
-button.btn {
-    padding: 18px 48px;
-    color: $color-white;
-    font-size: 18px;
-    font-weight: 700;
-    background: $color-pink-secondary;
-    box-shadow: 0px 8px 20px rgba(83, 2, 38, 0.4);
-    border-radius: 12px;
-
-    &:hover {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), $color-pink-secondary;
-        box-shadow: 0px 2px 10px rgba(83, 2, 38, 0.4);
-        transition: all 0.2s linear;
-    }
-    &:active {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), $color-pink-secondary;
-        box-shadow: none;
-        transition: all 0.2s linear;
-    }
+.description {
+    margin-bottom: 144px;
 }
 .features {
+    margin-bottom: 144px;
+
     &-list {
         width: 100%;
         display: flex;
@@ -104,6 +89,9 @@ button.btn {
             fill: $color-pink-secondary;
         }
     }
+}
+.contacts {
+    margin-bottom: 144px;
 }
 .form {
 
