@@ -2,8 +2,10 @@
 @import "grid.scss";
 @import "colors.scss";
 @import "typography.scss";
+@import "forms.scss";
 
 body {
+    min-width: 320px;
     background-color: #fff;
     color: $color-black;
     font-family: 'Montserrat', sans-serif;
@@ -33,7 +35,7 @@ body {
 
     &__link {
         display: block;
-        padding: 17px 24px;
+        padding: 13px 22px;
         border-top: 2px solid $color-black-5;
         border-bottom: 2px solid $color-black-5;
         box-sizing: border-box;
@@ -41,11 +43,25 @@ body {
         font-weight: 700;
         color: $color-pink-secondary;
         text-transform: uppercase;
+    
+        @media screen and (max-width: 520px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border: 2px solid $color-black-5;
+            border-radius: 50% !important;
+        }
         
 
         &.lang_active {
             background-color: $color-black-5;
             color: $color-black-40;
+
+            @media screen and (max-width: 520px) {
+                display: none;
+            }
         }
         &:not(.lang_active):hover {
             color: $color-pink;
@@ -54,8 +70,25 @@ body {
     }
 }
 .top-banner {
-    height: calc(100vh - 114px);
+    margin-bottom: 120px;
     background: url('../img/top-banner-bg.png') no-repeat right 120px;
+    background-size: contain;
+
+    @media screen and (max-width: 768px) {
+        background: none;
+    }
+}
+.block_with_people {
+    @media screen and (max-width: 768px) {
+        background: url('../img/top-banner-bg-small.png') no-repeat center center;
+        background-size: containl;
+    }
+}
+.responsive-img img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 .description {
     margin-bottom: 144px;
@@ -75,6 +108,14 @@ body {
         padding: 24px 24px 24px 0;
         margin-bottom: 24px;
         box-sizing: border-box;
+
+        @media screen and (max-width: 768px) {
+            width: calc(50% - 32px);
+        }
+        @media screen and (max-width: 520px) {
+            width: 100%;
+            text-align: center;
+        }
     }
     &-image {
         display: flex;
@@ -85,6 +126,10 @@ body {
         margin-bottom: 24px;
         background: url('../img/icon-poligon.png') no-repeat center;
 
+        @media screen and (max-width: 520px) {
+            margin: 0 auto 24px;
+        }
+
         svg {
             fill: $color-pink-secondary;
         }
@@ -93,71 +138,43 @@ body {
 .contacts {
     margin-bottom: 144px;
 }
-.form {
-
-    &-item {
-        position: relative;
-        margin-bottom: 24px;
-    }
-    &-bottom-line {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .input {
-        position: relative;
-        width: 100%;
-        padding: 18px 24px;
-        border: 2px solid $color-black-20;
-        box-sizing: border-box;
-        border-radius: 12px;
-        background: transparent;
-        font-family: 'Montserrat', sans-serif;
-        z-index: 2;
-
-        &:focus {
-            outline: none;
-            border-color: $color-black-60;
-            transition: all 0.2s linear;
-        }
-        &:invalid {
-            border-color: $color-pink-secondary;
-            transition: all 0.2s linear;
-        }
-        &-textarea {
-            resize: none;
-        }
-    }
-    .placeholder {
-        position: absolute;
-        top: 20px;
-        left: 22px;
-        padding: 0 2px;
-        font-size: 16px;
-        color: $color-black-60;
-        transition: all 0.2s linear;
-        z-index: 1;
-    }
-    .input:focus+.placeholder,
-    .input.filled+.placeholder {
-        top: -6px;
-        background: $color-white;
-        font-size: 14px;
-        z-index: 2;
-    }
-    .input:invalid+.placeholder {
-        color: $color-pink-secondary;
-    }
-}
 .list__item {
     margin-bottom: 16px;
 }
 .footer {
+    margin-bottom: 80px;
+
+    @media screen and (max-width: 1366px) {
+        margin-bottom: 0;
+    }
+
+
     .list {
         width: calc( 25% - 32px );
+
+        @media screen and (max-width: 1366px) {
+            width: calc( 50% - 32px );
+            margin-bottom: 40px;
+
+            &:nth-child(1) {
+                order: 1;
+            }
+            &:nth-child(2) {
+                order: 3;
+            }
+            &:nth-child(3) {
+                order: 4;
+            }
+            &:nth-child(4) {
+                order: 2;
+            }
+        }
+        @media screen and (max-width: 520px) {
+            width: 100%;
+        }
     }
     .link {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: bold;
     }
 }

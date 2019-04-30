@@ -1,0 +1,57 @@
+.form {
+
+    &-item {
+        position: relative;
+        margin-bottom: 24px;
+    }
+    &-bottom-line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .input {
+        position: relative;
+        width: 100%;
+        padding: 18px 24px;
+        border: 2px solid $color-black-20;
+        box-sizing: border-box;
+        border-radius: 12px;
+        background: transparent;
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        z-index: 2;
+
+        &:focus {
+            outline: none;
+            border-color: $color-black-60;
+            transition: all 0.2s linear;
+        }
+        &:invalid {
+            border-color: $color-pink-secondary;
+            transition: all 0.2s linear;
+        }
+        &-textarea {
+            resize: none;
+        }
+    }
+    .placeholder {
+        position: absolute;
+        top: 20px;
+        left: 22px;
+        padding: 0 2px;
+        font-size: 14px;
+        color: $color-black-60;
+        transition: all 0.2s linear;
+        z-index: 1;
+    }
+    .input:focus+.placeholder,
+    .input.filled+.placeholder {
+        top: -6px;
+        background: $color-white;
+        font-size: 12px;
+        z-index: 2;
+    }
+    .input:invalid+.placeholder {
+        color: $color-pink-secondary;
+    }
+}

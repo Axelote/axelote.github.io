@@ -3,15 +3,22 @@
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    padding-left: 48px;
-    padding-right: 48px;
+    padding: 0 48px;
     box-sizing: border-box;
+
+    @media screen and (max-width: 1366px) {
+        padding: 0 24px;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0 16px;
+    }
 }
 .row {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .aligned_top {
     align-items: flex-start;
@@ -21,4 +28,9 @@
 }
 .grid-col4 {
     width: 33.3%;
+}
+.grid-xs-col12 {
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 }
