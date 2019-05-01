@@ -87,6 +87,13 @@ button {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
+@media screen and (max-width: 768px) {
+  .column_reverse_mobile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; } }
+
 .aligned_top {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -101,6 +108,10 @@ button {
 @media screen and (max-width: 768px) {
   .grid-xs-col12 {
     width: 100%; } }
+
+@media screen and (max-width: 768px) {
+  .mobile_hide {
+    display: none; } }
 
 .title-h1 {
   margin-bottom: 40px;
@@ -227,12 +238,23 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media screen and (max-width: 520px) {
+    .form-bottom-line {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .form-bottom-line .btn {
+        margin-bottom: 24px; } }
 
 .form .input {
   position: relative;
   width: 100%;
-  padding: 18px 24px;
-  border: 2px solid #D2CDD0;
+  padding: 13px 14px;
+  border: 1px solid #D2CDD0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 12px;
@@ -256,8 +278,8 @@ a {
 
 .form .placeholder {
   position: absolute;
-  top: 20px;
-  left: 22px;
+  top: 17px;
+  left: 13px;
   padding: 0 2px;
   font-size: 14px;
   color: #796871;
@@ -277,13 +299,12 @@ a {
   color: #C51162; }
 
 body {
-  min-width: 320px;
   background-color: #fff;
   color: #200312;
   font-family: 'Montserrat', sans-serif; }
 
 .header {
-  margin: 40px 0; }
+  margin: 40px 0 149px; }
 
 .lang-switcher {
   display: -webkit-box;
@@ -350,9 +371,16 @@ body {
       background: none; } }
 
 @media screen and (max-width: 768px) {
-  .block_with_people {
-    background: url("../img/top-banner-bg-small.png") no-repeat center center;
-    background-size: containl; } }
+  .block_with_people-big {
+    display: none; } }
+
+.block_with_people {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .block_with_people {
+      display: block;
+      background: url("../img/top-banner-bg-small.png") no-repeat center center;
+      background-size: contain; } }
 
 .responsive-img img {
   width: auto;
@@ -401,8 +429,8 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 144px;
-    height: 144px;
+    width: 120px;
+    height: 120px;
     margin-bottom: 24px;
     background: url("../img/icon-poligon.png") no-repeat center; }
     @media screen and (max-width: 520px) {
@@ -413,6 +441,8 @@ body {
 
 .contacts {
   margin-bottom: 144px; }
+  .contacts__image-wrap {
+    padding: 0 16px; }
 
 .list__item {
   margin-bottom: 16px; }

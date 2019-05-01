@@ -5,13 +5,13 @@
 @import "forms.scss";
 
 body {
-    min-width: 320px;
+    // min-width: 320px;
     background-color: #fff;
     color: $color-black;
     font-family: 'Montserrat', sans-serif;
 }
 .header {
-    margin: 40px 0;
+    margin: 40px 0 149px;
 }
 .lang-switcher {
     display: flex;
@@ -78,10 +78,18 @@ body {
         background: none;
     }
 }
-.block_with_people {
+.block_with_people-big {
     @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+.block_with_people {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: block;
         background: url('../img/top-banner-bg-small.png') no-repeat center center;
-        background-size: containl;
+        background-size: contain;
     }
 }
 .responsive-img img {
@@ -121,8 +129,8 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 144px;
-        height: 144px;
+        width: 120px;
+        height: 120px;
         margin-bottom: 24px;
         background: url('../img/icon-poligon.png') no-repeat center;
 
@@ -137,6 +145,10 @@ body {
 }
 .contacts {
     margin-bottom: 144px;
+
+    &__image-wrap {
+        padding: 0 16px;
+    }
 }
 .list__item {
     margin-bottom: 16px;
