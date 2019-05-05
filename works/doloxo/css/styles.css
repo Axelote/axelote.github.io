@@ -66,10 +66,10 @@ button {
   padding: 0 48px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-width: 1365px) {
     .layout {
       padding: 0 24px; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .layout {
       padding: 0 16px; } }
 
@@ -87,7 +87,7 @@ button {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .column_reverse_mobile {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -105,11 +105,11 @@ button {
 .grid-col4 {
   width: 33.3%; }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .grid-sm-col12 {
     width: 100%; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .grid-xs-col12 {
     width: 100%; } }
 
@@ -121,8 +121,9 @@ button {
   margin-bottom: 48px;
   font-size: 36px;
   font-weight: bold; }
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-width: 1365px) {
     .title-h1 {
+      padding-right: 16px;
       font-size: 28px; } }
 
 .title-h2 {
@@ -131,7 +132,7 @@ button {
   font-weight: bold; }
   .title-h2.title_underlined {
     margin-bottom: 64px; }
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-width: 1365px) {
     .title-h2 {
       font-size: 20px; } }
 
@@ -139,7 +140,7 @@ button {
   margin-bottom: 12px;
   font-size: 20px;
   font-weight: bold; }
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-width: 1365px) {
     .title-h3 {
       font-size: 18px; } }
 
@@ -163,11 +164,12 @@ button {
 .text {
   margin-bottom: 24px;
   font-size: 16px;
-  line-height: normal; }
+  line-height: 144%; }
 
 .caption {
   font-size: 14px;
-  line-height: normal; }
+  line-height: normal;
+  color: #796871; }
 
 .text-center {
   text-align: center; }
@@ -259,7 +261,7 @@ a {
       .form-bottom-line .btn {
         width: 100%;
         margin-bottom: 24px; } }
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 519px) {
     .form-bottom-line {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -331,6 +333,12 @@ body {
 
 .header {
   margin: 48px 0 149px; }
+  @media screen and (max-width: 767px) {
+    .header {
+      margin-bottom: 101px; } }
+  @media screen and (max-width: 519px) {
+    .header {
+      margin-bottom: 68px; } }
 
 .lang-switcher {
   display: -webkit-box;
@@ -443,10 +451,9 @@ body {
     @media screen and (max-width: 1365px) {
       .features-item {
         width: calc(50% - 32px); } }
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 519px) {
       .features-item {
-        width: 100%;
-        text-align: center; } }
+        width: 100%; } }
   .features-image {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -461,7 +468,7 @@ body {
     height: 120px;
     margin-bottom: 24px;
     background: url("../img/icon-poligon.png") no-repeat center; }
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 519px) {
       .features-image {
         margin: 0 auto 24px; } }
     .features-image svg {
@@ -471,18 +478,20 @@ body {
   margin-bottom: 144px; }
   .contacts__image-wrap {
     padding: 0 16px; }
+    .contacts__image-wrap .caption {
+      margin-top: 32px; }
 
 .list__item {
   margin-bottom: 16px; }
 
 .footer {
   margin-bottom: 80px; }
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-width: 1365px) {
     .footer {
       margin-bottom: 0; } }
   .footer .list {
     width: calc( 25% - 32px); }
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1365px) {
       .footer .list {
         width: calc( 50% - 32px);
         margin-bottom: 40px; }
@@ -502,7 +511,7 @@ body {
           -webkit-box-ordinal-group: 3;
               -ms-flex-order: 2;
                   order: 2; } }
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 519px) {
       .footer .list {
         width: 100%; } }
   .footer .link {

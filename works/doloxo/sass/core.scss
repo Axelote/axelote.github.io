@@ -11,6 +11,13 @@ body {
 }
 .header {
     margin: 48px 0 149px;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 101px;
+    }
+    @media screen and (max-width: 519px) {
+        margin-bottom: 68px;
+    }
 }
 .lang-switcher {
     display: flex;
@@ -121,9 +128,9 @@ body {
         @media screen and (max-width: 1365px) {
             width: calc(50% - 32px);
         }
-        @media screen and (max-width: 520px) {
+        @media screen and (max-width: 519px) {
             width: 100%;
-            text-align: center;
+            // text-align: center;
         }
     }
     &-image {
@@ -135,7 +142,7 @@ body {
         margin-bottom: 24px;
         background: url('../img/icon-poligon.png') no-repeat center;
 
-        @media screen and (max-width: 520px) {
+        @media screen and (max-width: 519px) {
             margin: 0 auto 24px;
         }
 
@@ -149,6 +156,10 @@ body {
 
     &__image-wrap {
         padding: 0 16px;
+
+        .caption {
+            margin-top: 32px;
+        }
     }
 }
 .list__item {
@@ -157,7 +168,7 @@ body {
 .footer {
     margin-bottom: 80px;
 
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1365px) {
         margin-bottom: 0;
     }
 
@@ -165,7 +176,7 @@ body {
     .list {
         width: calc( 25% - 32px );
 
-        @media screen and (max-width: 1366px) {
+        @media screen and (max-width: 1365px) {
             width: calc( 50% - 32px );
             margin-bottom: 40px;
 
@@ -182,7 +193,7 @@ body {
                 order: 2;
             }
         }
-        @media screen and (max-width: 520px) {
+        @media screen and (max-width: 519px) {
             width: 100%;
         }
     }

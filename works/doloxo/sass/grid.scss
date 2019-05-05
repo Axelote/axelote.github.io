@@ -6,10 +6,10 @@
     padding: 0 48px;
     box-sizing: border-box;
 
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1365px) {
         padding: 0 24px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         padding: 0 16px;
     }
 }
@@ -21,7 +21,7 @@
     flex-wrap: wrap;
 }
 .column_reverse_mobile {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         flex-direction: column-reverse;
     }
 }
@@ -35,12 +35,12 @@
     width: 33.3%;
 }
 .grid-sm-col12 {
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
         width: 100%;
     }
 }
 .grid-xs-col12 {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         width: 100%;
     }
 }
