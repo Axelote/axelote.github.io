@@ -105,16 +105,20 @@ button {
 .grid-col4 {
   width: 33.3%; }
 
+@media screen and (max-width: 1024px) {
+  .grid-sm-col12 {
+    width: 100%; } }
+
 @media screen and (max-width: 768px) {
   .grid-xs-col12 {
     width: 100%; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   .mobile_hide {
     display: none; } }
 
 .title-h1 {
-  margin-bottom: 40px;
+  margin-bottom: 48px;
   font-size: 36px;
   font-weight: bold; }
   @media screen and (max-width: 1366px) {
@@ -170,6 +174,8 @@ button {
 
 .btn {
   display: inline-block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   padding: 16px 48px;
   color: #fff;
   font-size: 16px;
@@ -238,6 +244,21 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+    .form-bottom-line {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+      .form-bottom-line .btn {
+        width: 100%;
+        margin-bottom: 24px; } }
   @media screen and (max-width: 520px) {
     .form-bottom-line {
       -webkit-box-orient: vertical;
@@ -248,7 +269,12 @@ a {
           -ms-flex-pack: center;
               justify-content: center; }
       .form-bottom-line .btn {
-        margin-bottom: 24px; } }
+        width: 100%;
+        margin-bottom: 24px; }
+      .form-bottom-line .caption {
+        text-align: left; } }
+  .form-bottom-line .caption {
+    text-align: right; }
 
 .form .input {
   position: relative;
@@ -304,7 +330,7 @@ body {
   font-family: 'Montserrat', sans-serif; }
 
 .header {
-  margin: 40px 0 149px; }
+  margin: 48px 0 149px; }
 
 .lang-switcher {
   display: -webkit-box;
@@ -368,6 +394,7 @@ body {
   background-size: contain; }
   @media screen and (max-width: 768px) {
     .top-banner {
+      margin-bottom: 0;
       background: none; } }
 
 @media screen and (max-width: 768px) {
@@ -375,7 +402,8 @@ body {
     display: none; } }
 
 .block_with_people {
-  display: none; }
+  display: none;
+  margin-bottom: 80px; }
   @media screen and (max-width: 768px) {
     .block_with_people {
       display: block;
@@ -412,7 +440,7 @@ body {
     margin-bottom: 24px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1365px) {
       .features-item {
         width: calc(50% - 32px); } }
     @media screen and (max-width: 520px) {

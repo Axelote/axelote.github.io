@@ -5,13 +5,12 @@
 @import "forms.scss";
 
 body {
-    // min-width: 320px;
     background-color: #fff;
     color: $color-black;
     font-family: 'Montserrat', sans-serif;
 }
 .header {
-    margin: 40px 0 149px;
+    margin: 48px 0 149px;
 }
 .lang-switcher {
     display: flex;
@@ -75,6 +74,7 @@ body {
     background-size: contain;
 
     @media screen and (max-width: 768px) {
+        margin-bottom: 0;
         background: none;
     }
 }
@@ -85,6 +85,7 @@ body {
 }
 .block_with_people {
     display: none;
+    margin-bottom: 80px;
 
     @media screen and (max-width: 768px) {
         display: block;
@@ -117,7 +118,7 @@ body {
         margin-bottom: 24px;
         box-sizing: border-box;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1365px) {
             width: calc(50% - 32px);
         }
         @media screen and (max-width: 520px) {
