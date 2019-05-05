@@ -142,9 +142,9 @@ body {
         margin-bottom: 24px;
         background: url('../img/icon-poligon.png') no-repeat center;
 
-        @media screen and (max-width: 519px) {
-            margin: 0 auto 24px;
-        }
+        // @media screen and (max-width: 519px) {
+        //     margin: 0 auto 24px;
+        // }
 
         svg {
             fill: $color-pink-secondary;

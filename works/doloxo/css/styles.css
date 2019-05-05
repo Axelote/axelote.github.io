@@ -468,9 +468,6 @@ body {
     height: 120px;
     margin-bottom: 24px;
     background: url("../img/icon-poligon.png") no-repeat center; }
-    @media screen and (max-width: 519px) {
-      .features-image {
-        margin: 0 auto 24px; } }
     .features-image svg {
       fill: #C51162; }
 
