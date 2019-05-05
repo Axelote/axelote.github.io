@@ -272,7 +272,7 @@ a {
         width: 100%;
         margin-bottom: 24px; }
       .form-bottom-line .caption {
-        text-align: left; } }
+        text-align: left !important; } }
   .form-bottom-line .caption {
     text-align: right; }
 
