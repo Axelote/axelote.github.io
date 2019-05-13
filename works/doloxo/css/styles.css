@@ -477,6 +477,20 @@ body {
     padding: 0 16px; }
     .contacts__image-wrap .caption {
       margin-top: 32px; }
+  .contacts span.mobile_hide {
+    display: inline; }
+    @media screen and (max-width: 1023px) {
+      .contacts span.mobile_hide {
+        display: none; } }
+  .contacts span.mobile_show {
+    display: none; }
+    @media screen and (max-width: 1023px) {
+      .contacts span.mobile_show {
+        display: inline; } }
+
+@media screen and (min-width: 520px) and (max-width: 1023px) {
+  .contact-link {
+    display: block; } }
 
 .list__item {
   margin-bottom: 16px; }
