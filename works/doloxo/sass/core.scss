@@ -142,10 +142,6 @@ body {
         margin-bottom: 24px;
         background: url('../img/icon-poligon.png') no-repeat center;
 
-        // @media screen and (max-width: 519px) {
-        //     margin: 0 auto 24px;
-        // }
-
         svg {
             fill: $color-pink-secondary;
         }
@@ -164,6 +160,21 @@ body {
 }
 .list__item {
     margin-bottom: 16px;
+
+    &.mobile_show {
+        display: none;
+
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
+    &.mobile_hide {
+        display: block;
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
 }
 .footer {
     margin-bottom: 80px;

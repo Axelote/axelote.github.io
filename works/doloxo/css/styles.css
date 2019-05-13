@@ -480,6 +480,16 @@ body {
 
 .list__item {
   margin-bottom: 16px; }
+  .list__item.mobile_show {
+    display: none; }
+    @media screen and (max-width: 767px) {
+      .list__item.mobile_show {
+        display: block; } }
+  .list__item.mobile_hide {
+    display: block; }
+    @media screen and (max-width: 767px) {
+      .list__item.mobile_hide {
+        display: none; } }
 
 .footer {
   margin-bottom: 80px; }
